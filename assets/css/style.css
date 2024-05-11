@@ -1,0 +1,211 @@
+@import url('reset.css');
+@import url('utils.css');
+@import url('whiteboard.css');
+
+input:not([type=file]):not([type=radio]),
+textarea {
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 15px 10px;
+}
+
+button {
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.text-error {
+    color: #dc2b3c;
+}
+
+.input_item_group {
+    padding-bottom: 15px;
+}
+
+.input_item_group label {
+    font-weight: 500;
+}
+
+.alert {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+
+.alert-error {
+    border: 1px solid rgb(255, 165, 165);
+    background-color: #F8D7DA;
+}
+
+nav {
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.nav_logo img {
+    height: 45px;
+}
+
+aside {
+    border-right: 1px solid gainsboro;
+    width: 350px;
+    height: 100%;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_class_links {
+    list-style: none;
+}
+
+.sidebar_class_links li a {
+    text-decoration: none;
+    display: block;
+    padding: 14px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+
+.sidebar_class_links li a:hover {
+    background-color: rgb(206, 226, 244);
+}
+
+.page_auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.class_list_cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.card_class {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(240, 240, 240);
+}
+
+.page_private {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.page_private main {
+    display: flex;
+    flex: 1;
+}
+
+.main_content {
+    padding: 30px;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid gainsboro;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card_auth {
+    width: 350px;
+}
+
+.card_auth img {
+    margin: auto;
+    display: block;
+    padding-bottom: 20px;
+}
+
+.page_class_details .main_content {
+    width: 65%;
+    margin: auto;
+}
+
+.class_details_cover {
+    height: 250px;
+    background-color: azure;
+    border-radius: 10px;
+    background-image: url('/assets/images/class_details_cover.jpg');
+    display: flex;
+    align-items: end;
+    padding: 30px;
+    color: white;
+}
+
+.card_create_post {
+    margin-bottom: 10px;
+}
+
+.card_class_post {
+    margin-bottom: 10px;
+}
+
+.class_post_author {
+    display: flex;
+    gap: 15px;
+}
+
+.class_post_author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.class_post_content {
+    padding: 15px 0;
+}
+
+.class_details_area {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.class_actions {
+    width: 320px;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.class_content {
+    flex: 1;
+}
+
+.page_create_new_class .main_content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_create_new_class {
+    width: 400px;
+}
+
+.card_create_new_class h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}

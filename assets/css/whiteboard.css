@@ -1,0 +1,42 @@
+.page_whiteboard {
+
+    canvas {
+        border: 1px solid gainsboro;
+    }
+
+    .colors {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+
+        display: flex;
+        gap: 10px;
+    }
+
+    .color {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .color-blue {
+        background-color: rgb(108, 108, 248);
+    }
+
+    .color-teal {
+        background-color: teal;
+    }
+
+    .color-red {
+        background-color: red;
+    }
+
+    .color-green {
+        background-color: green;
+    }
+
+    .color-black {
+        background-color: black;
+    }
+}
