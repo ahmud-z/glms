@@ -1,0 +1,19 @@
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-copy {
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #63a5e3;
+}
+
+.btn-copy:hover {
+    background: #5394d2;
+}
+
+.btn-copy:active {
+    background: #3f7bb4;
+}

@@ -2,6 +2,15 @@
     display: flex;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -16,4 +25,15 @@
 
 .h-screen {
     height: 100vh;
+}
+
+.avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.p-6 {
+    padding: 6px;
 }

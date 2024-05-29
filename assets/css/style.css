@@ -1,5 +1,7 @@
+@import url('variables.css');
 @import url('reset.css');
 @import url('utils.css');
+@import url('buttons.css');
 @import url('whiteboard.css');
 
 input:not([type=file]):not([type=radio]),
@@ -10,7 +12,23 @@ textarea {
     padding: 15px 10px;
 }
 
-button {
+.login-div a {
+    color: white;
+}
+
+.login-div a:hover {
+    color: red;
+}
+
+.login-div p {
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+button,
+.btn {
+    text-decoration: none;
+    text-wrap: nowrap;
     border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 10px;
@@ -30,6 +48,12 @@ button {
 
 .input_item_group label {
     font-weight: 500;
+}
+
+
+body {
+    background: radial-gradient(circle at 1.8% 4.8%, rgb(17, 23, 58) 0%, rgb(58, 85, 148) 90%);
+    color: white;
 }
 
 .alert {
@@ -56,6 +80,17 @@ nav {
 .nav_logo img {
     height: 45px;
 }
+
+nav .avatar {
+    height: 32px;
+    width: 32px;
+}
+
+nav .avatar img {
+    height: 100%;
+    width: 100%;
+}
+
 
 aside {
     border-right: 1px solid gainsboro;
@@ -140,7 +175,7 @@ aside {
 
 .page_class_details .main_content {
     width: 65%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .class_details_cover {
@@ -160,6 +195,11 @@ aside {
 
 .card_class_post {
     margin-bottom: 10px;
+}
+
+.card_class_post_header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .class_post_author {
@@ -187,7 +227,6 @@ aside {
 .class_actions {
     width: 320px;
     height: 100%;
-    background-color: aliceblue;
 }
 
 .class_content {
@@ -208,4 +247,34 @@ aside {
 .card_create_new_class h2 {
     text-align: center;
     padding-bottom: 20px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
 }

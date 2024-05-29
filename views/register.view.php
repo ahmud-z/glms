@@ -7,7 +7,7 @@
         <?php include 'partials/errors.php'; ?>
 
         <div class="input_item_group">
-            <input name="name" type="text" placeholder="John Doe" required>
+            <input name="name" type="text" placeholder="Your name" required>
             <p class="input_error"></p>
         </div>
 
@@ -24,8 +24,14 @@
         <div class="input_item_group">
             <label for="">Are you?</label>
             <div>
-                <div><input type="radio" name="type" value="student" id="radio_student" required> <label for="radio_student">Student</label></div>
-                <div><input type="radio" name="type" value="teacher" id="radio_teacher" required> <label for="radio_teacher">Teacher</label></div>
+                <div>
+                    <input type="radio" name="type" value="student" id="radio_student" required>
+                    <label for="radio_student">Student</label>
+                </div>
+                <div>
+                    <input type="radio" name="type" value="teacher" id="radio_teacher" required>
+                    <label for="radio_teacher">Teacher</label>
+                </div>
             </div>
             <p class="input_error"></p>
         </div>

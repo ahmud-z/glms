@@ -4,7 +4,7 @@ class Database
 {
     private $connection;
 
-    function __construct($host = "localhost", $username = "root", $password = "", $db = "gclassroom_project_db")
+    function __construct($host = "localhost", $username = "root", $password = "", $db = "gclassroom_project_testdb")
     {
         $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 

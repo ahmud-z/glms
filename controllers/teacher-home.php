@@ -12,4 +12,4 @@ $classes = $db->query("
     WHERE classes.teacher_id = ?
     ORDER BY name;", [$teacher_id])->fetchAll();
 
-require 'views/home.view.php';
+require 'views/teacher-home.view.php';

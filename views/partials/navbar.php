@@ -3,11 +3,16 @@
         <img src="assets/images/gublogo.svg" alt="" srcset="">
     </a>
 
-    <div>
-        <a class="" href="/create-class">Create Class</a>
-        <a class="" href="/join-class">Join Class</a>
+    <div class="flex flex-center">
+        <?php if ($auth_user['type'] == 'teacher') : ?>
+            <a class="btn btn-primary" href="/create-class">Create Class</a>
+        <?php endif; ?>
 
-        <a href="">
+        <?php if ($auth_user['type'] == 'student') : ?>
+            <a class="btn" href="/join-class">Join Class</a>
+        <?php endif; ?>
+
+        <a href="" class="avatar">
             <img src="https://picsum.photos/32" alt="">
         </a>
     </div>

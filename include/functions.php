@@ -2,7 +2,7 @@
 
 function dd($value) {
     echo "<pre>";
-    var_dump($value);
+    print_r($value);
     echo "</pre>";
     
     die();
@@ -34,4 +34,18 @@ function getCurrentUser()
     $results = $db->query("SELECT * FROM users where id = ?", [$_SESSION['current_user_id']]);
 
     return $results[0];
+}
+
+function generateUniqueCode($length = 6) {
+    // Define the characters to be used in the code
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $uniqueCode = '';
+
+    // Loop to create the code of the specified length
+    for ($i = 0; $i < $length; $i++) {
+        $uniqueCode .= $characters[rand(0, $charactersLength - 1)];
+    }
+
+    return strtoupper($uniqueCode);
 }

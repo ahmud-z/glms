@@ -1,14 +1,23 @@
 .page_whiteboard {
-
     canvas {
-        border: 1px solid gainsboro;
+        border: 1px solid #000;
+        background: #fff;
+        position: fixed;
+        height: 100vh;
+    }
+
+    .actions {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 9;
     }
 
     .colors {
         position: fixed;
         left: 20px;
         top: 20px;
-
+        z-index: 9;
         display: flex;
         gap: 10px;
     }

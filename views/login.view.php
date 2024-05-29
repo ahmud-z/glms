@@ -18,10 +18,9 @@
             <p class="input_error"></p>
         </div>
 
-        <div>
+        <div class="login-div">
             <button>Login</button>
-
-            New user? <a href="/register">Create Account</a>
+            <p>New user? <a href="/register">Create Account</a> </p>
         </div>
     </form>
 </main>

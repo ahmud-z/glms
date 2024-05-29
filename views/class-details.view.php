@@ -15,16 +15,21 @@
             <div class="class_details_area">
                 <div class="class_actions">
                     <button>Start Whiteboard</button>
+
+                    <div class="flex justify-between p-6">
+                        <span><?php echo $class['code'] ?></span>
+                        <div class="btn-copy" onclick="navigator.clipboard.writeText('<?php echo $class['code'] ?>')">Copy</div>
+                    </div>
                 </div>
                 <div class="class_content">
-                    <form action="/create-post" method="POST" class="card card_create_post">
+                    <form action="/create-post" method="POST" class="card card_create_post" enctype="multipart/form-data">
                         <input type="hidden" name="class_id" value="<?= $_GET['id'] ?>">
 
                         <div class="input_item_group">
-                            <textarea name="content" placeholder="Announce something to your class" cols="30" rows="4"></textarea>
+                            <textarea name="content" placeholder="Announce something to your class" cols="30" rows="4" required></textarea>
                         </div>
                         <div>
-                            <input type="file" name="" id="">
+                            <input type="file" name="files[]" multiple>
                         </div>
                         <div>
                             <button>Create Post</button>
@@ -35,20 +40,41 @@
                         <?php foreach ($posts as $post) : ?>
 
                             <div class="card card_class_post">
-                                <div class="class_post_author">
-                                    <img src="https://picsum.photos/32" alt="">
-                                    <div>
-                                        <p>
-                                            <?= $post['user_name'] ?>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-shield">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                            </svg>
-                                        </p>
-                                        <small><?= $post['created_at'] ?></small>
+                                <div class="card_class_post_header">
+                                    <div class="class_post_author">
+                                        <img src="https://picsum.photos/32" alt="">
+                                        <div>
+                                            <p>
+                                                <?= $post['user_name'] ?>
+
+                                                <?php if ($post['user_type'] == 'teacher') : ?>
+                                                    <i data-lucide="star"></i>
+                                                <?php endif; ?>
+                                            </p>
+                                            <small><?= $post['created_at'] ?></small>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <div onclick="handleDropDown(this)">
+                                            <i data-lucide="ellipsis"></i>
+                                        </div>
+                                        <div class="dropdown-content">
+                                            <a href="/delete-post?id=<?= $post['id'] ?>">Delete</a>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="class_post_content">
                                     <p><?= $post['content'] ?></p>
+                                </div>
+                                <div>
+                                    <?php foreach ($post['attachments'] as $path) : ?>
+                                        <p>
+                                            <a href="<?= $path ?>">
+                                                <i data-lucide="file-down"></i>
+                                            </a>
+                                        </p>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
 

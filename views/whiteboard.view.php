@@ -2,12 +2,8 @@
 
 <main class="page_private page_whiteboard">
     <section class="main_content">
-        <div class="colors">
-            <div class="color color-blue"></div>
-            <div class="color color-teal"></div>
-            <div class="color color-red"></div>
-            <div class="color color-green"></div>
-            <div class="color color-black"></div>
+        <div class="actions">
+            <button onclick="clearBoard()">Clear Board</button>
         </div>
     </section>
 </main>

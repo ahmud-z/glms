@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = md5($_POST['password']); // Hash plain text password to md5
     $type = $_POST['type'];
 
     $results = $db->query("SELECT COUNT(*) as total_found FROM users WHERE email = ?;", [$email])->fetch();

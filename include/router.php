@@ -1,6 +1,6 @@
 <?php
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$path = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/home.php',
@@ -13,12 +13,14 @@ $routes = [
     '/create-class' => 'controllers/create-class.php',
     '/join-class' => 'controllers/join-class.php',
     '/create-post' => 'controllers/create-post.php',
+    '/edit-post' => 'controllers/edit-post.php',
+    '/delete-post' => 'controllers/delete-post.php',
 ];
 
-function routeToControllers($uri, $routes)
+function routeToControllers($path, $routes)
 {
-    if (array_key_exists($uri, $routes)) {
-        require $routes[$uri];
+    if (array_key_exists($path, $routes)) {
+        require $routes[$path];
     } else {
         abort();
     }
@@ -33,4 +35,4 @@ function abort($code = 404)
     die();
 }
 
-routeToControllers($uri, $routes);
+routeToControllers($path, $routes);
