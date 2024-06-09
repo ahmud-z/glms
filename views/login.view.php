@@ -8,7 +8,7 @@
 
         <div class="input_item_group">
             <label for=""></label>
-            <input name="email" type="text" placeholder="_____@green.ac.bd" required>
+            <input name="email" type="text" placeholder="_____@green.edu.bd" required>
             <p class="input_error"></p>
         </div>
 

@@ -4,10 +4,11 @@
 }
 
 .btn-copy {
-    padding: 4px;
+    padding: 6px 8px;
     border-radius: 4px;
     cursor: pointer;
     background: #63a5e3;
+    color: white;
 }
 
 .btn-copy:hover {

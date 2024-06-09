@@ -32,7 +32,7 @@ button,
     border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 10px;
-    width: 100%;
+    /* width: 100%; */
     font-size: medium;
     font-weight: 500;
     cursor: pointer;
@@ -51,10 +51,10 @@ button,
 }
 
 
-body {
+/* body {
     background: radial-gradient(circle at 1.8% 4.8%, rgb(17, 23, 58) 0%, rgb(58, 85, 148) 90%);
-    color: white;
-}
+    color: black;
+} */
 
 .alert {
     padding: 8px;
@@ -79,6 +79,7 @@ nav {
 
 .nav_logo img {
     height: 45px;
+    
 }
 
 nav .avatar {
@@ -191,6 +192,7 @@ aside {
 
 .card_create_post {
     margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .card_class_post {
@@ -225,7 +227,7 @@ aside {
 }
 
 .class_actions {
-    width: 320px;
+    width: 300px;
     height: 100%;
 }
 
@@ -277,4 +279,35 @@ aside {
 
 .show {
     display: block;
+}
+
+.postImage {
+    width: 60%;
+}
+
+.choose-file-btn{
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.create-class-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.create-class-btn img{
+    background: red;
+    width: 300px;
+}
+
+.create-post-btn{
+    width: 100%;
+}
+
+.class-code-container{
+    width: 280px;
+    margin: 24px 0 0 0;
+    padding: 30px 10px;
+    border-radius: 6px;
+    border: 1px solid gainsboro;
 }

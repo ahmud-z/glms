@@ -16,7 +16,7 @@
                 <div class="class_actions">
                     <button>Start Whiteboard</button>
 
-                    <div class="flex justify-between p-6">
+                    <div class="flex justify-between p-6 class-code-container">
                         <span><?php echo $class['code'] ?></span>
                         <div class="btn-copy" onclick="navigator.clipboard.writeText('<?php echo $class['code'] ?>')">Copy</div>
                     </div>
@@ -28,11 +28,11 @@
                         <div class="input_item_group">
                             <textarea name="content" placeholder="Announce something to your class" cols="30" rows="4" required></textarea>
                         </div>
-                        <div>
+                        <div class="choose-file-btn">
                             <input type="file" name="files[]" multiple>
                         </div>
                         <div>
-                            <button>Create Post</button>
+                            <button class="create-post-btn">Create Post</button>
                         </div>
                     </form>
 
@@ -42,13 +42,12 @@
                             <div class="card card_class_post">
                                 <div class="card_class_post_header">
                                     <div class="class_post_author">
-                                        <img src="https://picsum.photos/32" alt="">
+                                        <img src="https://i.pravatar.cc/40" alt="">
                                         <div>
                                             <p>
                                                 <?= $post['user_name'] ?>
 
                                                 <?php if ($post['user_type'] == 'teacher') : ?>
-                                                    <i data-lucide="star"></i>
                                                 <?php endif; ?>
                                             </p>
                                             <small><?= $post['created_at'] ?></small>
@@ -70,9 +69,7 @@
                                 <div>
                                     <?php foreach ($post['attachments'] as $path) : ?>
                                         <p>
-                                            <a href="<?= $path ?>">
-                                                <i data-lucide="file-down"></i>
-                                            </a>
+                                            <img class="postImage" src="<?= $path ?>" alt="">
                                         </p>
                                     <?php endforeach; ?>
                                 </div>

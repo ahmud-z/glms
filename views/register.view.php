@@ -3,16 +3,16 @@
 <main class="page_auth">
     <form class="card card_auth" action="/register" method="POST">
         <img src="assets/images/gublogo.svg" alt="">
-        
+
         <?php include 'partials/errors.php'; ?>
 
         <div class="input_item_group">
-            <input name="name" type="text" placeholder="Your name" required>
+            <input name="name" type="text" placeholder="Enter your name" required>
             <p class="input_error"></p>
         </div>
 
         <div class="input_item_group">
-            <input name="email" type="email" placeholder="_____@green.ac.bd" required>
+            <input name="email" type="email" placeholder="_____@green.edu.bd" required>
             <p class="input_error"></p>
         </div>
 
@@ -36,10 +36,10 @@
             <p class="input_error"></p>
         </div>
 
-        <div>
+        <div class="login-div">
             <button>Create Account</button>
-            
-            Have an account? <a href="/login">Login</a>
+
+            <p> Have an account? <a href="/login">Login</a></p>
         </div>
     </form>
 </main>

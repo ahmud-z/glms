@@ -3,7 +3,7 @@
         <img src="assets/images/gublogo.svg" alt="" srcset="">
     </a>
 
-    <div class="flex flex-center">
+    <div class="flex flex-center create-class-btn">
         <?php if ($auth_user['type'] == 'teacher') : ?>
             <a class="btn btn-primary" href="/create-class">Create Class</a>
         <?php endif; ?>
@@ -13,7 +13,7 @@
         <?php endif; ?>
 
         <a href="" class="avatar">
-            <img src="https://picsum.photos/32" alt="">
+            <img src="https://i.pravatar.cc/50" alt="">
         </a>
     </div>
 </nav>
