@@ -1,20 +1,67 @@
-.btn-primary {
-    background-color: var(--primary);
+.btn{
+    background: #4F46E5;
     color: white;
+    text-align: center;
+}
+
+.btn a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-secondary {
+    background: #6C757D;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn-secondary:hover {
+    background: #007BFF
+}
+
+.sidebar_class_links li .btn-danger{
+    background: #DC3545;
+    color: white;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
 }
 
 .btn-copy {
     padding: 6px 8px;
     border-radius: 4px;
     cursor: pointer;
-    background: #63a5e3;
+    background: #17A2B8;
     color: white;
 }
 
+.btn-success{
+    background: #007BFF;
+    color: aliceblue;
+}
+
 .btn-copy:hover {
-    background: #5394d2;
+    background: #17a8be;
 }
 
 .btn-copy:active {
-    background: #3f7bb4;
+    background: #14aec5;
+
+}
+
+.leave-btn{
+    background: gainsboro;
+}
+
+.leave-btn:hover{
+    background: red;
 }
