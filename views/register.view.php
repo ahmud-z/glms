@@ -37,7 +37,7 @@
         </div>
 
         <div class="login-div">
-            <button>Create Account</button>
+            <button class="login-btn">Create Account</button>
 
             <p> Have an account? <a href="/login">Login</a></p>
         </div>

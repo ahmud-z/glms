@@ -9,11 +9,11 @@
         <?php endif; ?>
 
         <?php if ($auth_user['type'] == 'student') : ?>
-            <a class="btn" href="/join-class">Join Class</a>
+            <a class="btn w0" href="/join-class">Join Class</a>
         <?php endif; ?>
 
         <a href="" class="avatar">
-            <img src="https://i.pravatar.cc/50" alt="">
+            <img src="https://i.pravatar.cc/100" alt="">
         </a>
     </div>
 </nav>

@@ -6,14 +6,14 @@
             <h2>Join New Class</h2>
 
             <?php include 'views/partials/errors.php'; ?>
-            
+
             <div class="input_item_group">
-                <label for=""></label>
+                <label class="form-label" for="">Enter a class code</label>
                 <input type="text" placeholder="Class Code" name="code" required>
                 <p class="input_error"></p>
             </div>
             <div>
-                <button>Join Class</button>
+                <button class="login-btn">Join Class</button>
             </div>
         </form>
     </section>

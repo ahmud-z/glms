@@ -4,7 +4,7 @@ require_once 'classes/Database.php';
 
 $db = new Database();
 
-$teacher_id = 1;
+$teacher_id = getCurrentUserId();
 
 $classes = $db->query("
     SELECT classes.*, users.name as teacher_name FROM classes

@@ -15,6 +15,9 @@ $routes = [
     '/create-post' => 'controllers/create-post.php',
     '/edit-post' => 'controllers/edit-post.php',
     '/delete-post' => 'controllers/delete-post.php',
+    '/start-whiteboard' => 'controllers/start-whiteboard.php',
+    '/leave-class' => 'controllers/leave-class.php',
+    '/enrolled-students' => 'controllers/enrolled-students.php',
 ];
 
 function routeToControllers($path, $routes)

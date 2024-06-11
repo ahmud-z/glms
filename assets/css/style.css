@@ -12,18 +12,15 @@ textarea {
     padding: 15px 10px;
 }
 
-.login-div a {
-    color: white;
-}
-
-.login-div a:hover {
-    color: red;
-}
-
 .login-div p {
     padding: 20px 0 0 0;
     text-align: center;
 }
+
+
+/* body {
+    background-image: url("/assets/bg-images/3.jpg");
+} */
 
 button,
 .btn {
@@ -79,7 +76,7 @@ nav {
 
 .nav_logo img {
     height: 45px;
-    
+
 }
 
 nav .avatar {
@@ -131,14 +128,17 @@ aside {
 .class_list_cards {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .card_class {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     text-decoration: none;
     background-color: rgb(240, 240, 240);
+
 }
 
 .page_private {
@@ -162,6 +162,7 @@ aside {
     border: 1px solid gainsboro;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .card_auth {
@@ -227,8 +228,16 @@ aside {
 }
 
 .class_actions {
+    border: 1px solid gainsboro;
     width: 300px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 30px 0;
+    gap: 30px;
 }
 
 .class_content {
@@ -285,29 +294,85 @@ aside {
     width: 60%;
 }
 
-.choose-file-btn{
+.choose-file-btn {
     padding: 10px 0;
     cursor: pointer;
 }
 
-.create-class-btn{
+.create-class-btn {
     display: flex;
     gap: 20px;
 }
 
-.create-class-btn img{
+.create-class-btn img {
     background: red;
     width: 300px;
 }
 
-.create-post-btn{
+.create-post-btn {
     width: 100%;
 }
 
-.class-code-container{
+.class-code-container {
     width: 280px;
-    margin: 24px 0 0 0;
     padding: 30px 10px;
     border-radius: 6px;
     border: 1px solid gainsboro;
+}
+
+.login-btn {
+    width: 100%;
+    background: #4F46E5;
+    color: white;
+}
+
+.form-label {
+    font-size: 16px;
+    display: block;
+    padding: 6px;
+}
+
+.login-div a {
+    color: black;
+}
+
+.login-div a:hover {
+    color: blue;
+}
+
+aside {
+    background: #1F2937;
+}
+
+.leave-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 10px;
+    align-items: center;
+
+    background: #4F46E5;
+    width: 50%;
+    border-radius: 6px;
+}
+
+.leave-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.leave-btn svg {
+    color: white;
+}
+
+.dp-round {
+    border-radius: 50%;
+}
+
+.width-280 {
+    width: 280px;
+}
+
+.dp-img {
+    border-radius: 50%;
 }

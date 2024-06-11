@@ -27,7 +27,7 @@
             </div>
 
             <div>
-                <button>Create Class</button>
+                <button class="login-btn">Create Class</button>
             </div>
         </form>
     </section>

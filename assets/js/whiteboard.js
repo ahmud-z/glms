@@ -11,7 +11,7 @@ function setup() {
     background(255);
 
     loadDrawing();
-    
+
     setInterval(loadDrawing, 200); // Fetch new drawings every second
 }
 

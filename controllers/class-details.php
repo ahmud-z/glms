@@ -14,6 +14,12 @@ if (empty($class)) {
     abort();
 }
 
+$isUserInClass = $db->query('SELECT * FROM class_students WHERE class_id = ? AND user_id = ?;', [$class['id'], getCurrentUserId()])->fetchAll();
+
+if ($class['teacher_id'] != getCurrentUserId() && count($isUserInClass) === 0) {
+    abort(403);
+}
+
 $results = $db->query("
     SELECT class_posts.*, users.name AS user_name, users.type AS user_type, class_post_attachments.path as attachment_path
     FROM class_posts 

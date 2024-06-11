@@ -14,13 +14,26 @@
 
             <div class="class_details_area">
                 <div class="class_actions">
-                    <button>Start Whiteboard</button>
+                    <?php if (getCurrentUser()['type'] == 'teacher') : ?>
+                        <a class="btn-secondary" href="/start-whiteboard?id=<?= $class['id'] ?>">Start Whiteboard</a>
+                    <?php endif; ?>
 
                     <div class="flex justify-between p-6 class-code-container">
                         <span><?php echo $class['code'] ?></span>
                         <div class="btn-copy" onclick="navigator.clipboard.writeText('<?php echo $class['code'] ?>')">Copy</div>
                     </div>
+
+                    <div class="btn width-280">
+                        <a href="/enrolled-students?class_id=<?= $class['id'] ?>">Enolled Students</a>
+                    </div>
+
+                    <?php if (getCurrentUser()['type'] == 'student') : ?>
+                        <div class="leave-btn">
+                            <a href="/leave-class?class_id=<?= $class['id'] ?>">Leave Class</a>
+                        </div>
+                    <?php endif; ?>
                 </div>
+
                 <div class="class_content">
                     <form action="/create-post" method="POST" class="card card_create_post" enctype="multipart/form-data">
                         <input type="hidden" name="class_id" value="<?= $_GET['id'] ?>">
@@ -32,7 +45,7 @@
                             <input type="file" name="files[]" multiple>
                         </div>
                         <div>
-                            <button class="create-post-btn">Create Post</button>
+                            <button class="create-post-btn btn-success">Create Post</button>
                         </div>
                     </form>
 
@@ -50,7 +63,7 @@
                                                 <?php if ($post['user_type'] == 'teacher') : ?>
                                                 <?php endif; ?>
                                             </p>
-                                            <small><?= $post['created_at'] ?></small>
+                                            <small><?= time_elapsed_string($post['created_at']) ?></small>
                                         </div>
                                     </div>
                                     <div class="dropdown">
