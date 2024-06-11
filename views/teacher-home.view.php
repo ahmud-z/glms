@@ -9,13 +9,31 @@
         <div class="main_content">
             <div class="class_list_cards">
                 <?php foreach ($classes as $class) : ?>
-                    <a class="card card_class" href="/class-details?id=<?= $class['id'] ?>">
-                        <div>
-                            <h4><?= $class['name'] ?></h4>
-                            <p><?= $class['section'] ?></p>
-                            <p>Teacher name</p>
+                    <a href="/class-details?id=<?php echo $class['id'] ?>">
+                        <div class="wrapper">
+                            <div class="block">
+                                <div class="cover">
+                                    <div class="cover-photo">
+                                    </div>
+                                    <div class="classroom-info">
+                                        <p class="class-name"> <?= $class['name'] ?> </p>
+                                        <p>Md. Riad Hasan</p>
+                                    </div>
+                                    <div class="round-circle">
+                                        <!-- <img src="unnamed.jpg" alt=""> -->
+                                        <img src="https://i.pravatar.cc/70" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="extra-icons">
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-folder2"></i>
+                                </div>
+                            </div>
                         </div>
                     </a>
+
+
                 <?php endforeach; ?>
             </div>
         </div>
