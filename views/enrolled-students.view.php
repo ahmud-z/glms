@@ -7,12 +7,27 @@
         <div class="main_content">
             <div class="class_details_area">
                 <div>
-                    <?php foreach($enrolledStudents as $enrolledStudent) : ?>
-                        <div class="student_card">
-                            <?= $enrolledStudent['name'] ?>
-                            <?= $enrolledStudent['email'] ?>
-                        </div>
-                    <?php endforeach ?>
+                    <?php if (count($enrolledStudents) == 0) : ?>
+                        <p>No students yet.</p>
+                    <?php endif; ?>
+                    <table border="1" class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <h1 class="text-center">Enrolled Students</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+
+                        <?php foreach ($enrolledStudents as $enrolledStudent) : ?>
+                            <tr>
+                                <td><?= $enrolledStudent['name'] ?></td>
+                                <td><?= $enrolledStudent['email'] ?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </table>
                 </div>
             </div>
         </div>
