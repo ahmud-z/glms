@@ -82,3 +82,11 @@ function time_elapsed_string($datetime, $full = false) {
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
+
+function random_color() {
+    $r = mt_rand(20, 127);   // R 0 and 127 (darker)
+    $g = mt_rand(100, 255); // G 127 and 255 (brighter)
+    $b = mt_rand(120, 255); // B 127 and 255 (brighter)
+    
+    return sprintf('#%02X%02X%02X', $r, $g, $b);
+}
