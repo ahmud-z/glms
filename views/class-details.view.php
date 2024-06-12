@@ -23,14 +23,16 @@
                         <div class="btn-copy" onclick="navigator.clipboard.writeText('<?php echo $class['code'] ?>')">Copy</div>
                     </div>
 
-                    <div class="btn width-280">
-                        <a href="/enrolled-students?class_id=<?= $class['id'] ?>">Enolled Students</a>
-                    </div>
+                    <?php if (getCurrentUser()['type'] == 'teacher') : ?>
+                        <div class="btn width-280">
+                            <a href="/enrolled-students?class_id=<?= $class['id'] ?>">Enolled Students</a>
+                        </div>
+                    <?php endif; ?>
 
                     <?php if (getCurrentUser()['type'] == 'student') : ?>
-                        <div class="leave-btn">
-                            <a href="/leave-class?class_id=<?= $class['id'] ?>">Leave Class</a>
-                        </div>
+                        <a class="btn btn-secondary flex items-center justify-between" href="/leave-class?class_id=<?= $class['id'] ?>">
+                            Leave Class
+                        </a>
                     <?php endif; ?>
                 </div>
 
@@ -66,14 +68,17 @@
                                             <small><?= time_elapsed_string($post['created_at']) ?></small>
                                         </div>
                                     </div>
-                                    <div class="dropdown">
-                                        <div onclick="handleDropDown(this)">
-                                            <i data-lucide="ellipsis"></i>
+
+                                    <?php if (getCurrentUserId() == $post['user_id']) : ?>
+                                        <div class="dropdown">
+                                            <div onclick="handleDropDown(this)">
+                                                <i data-lucide="ellipsis"></i>
+                                            </div>
+                                            <div class="dropdown-content">
+                                                <a href="/delete-post?id=<?= $post['id'] ?>">Delete</a>
+                                            </div>
                                         </div>
-                                        <div class="dropdown-content">
-                                            <a href="/delete-post?id=<?= $post['id'] ?>">Delete</a>
-                                        </div>
-                                    </div>
+                                    <?php endif ?>
                                 </div>
 
                                 <div class="class_post_content">

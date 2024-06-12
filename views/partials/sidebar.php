@@ -13,7 +13,7 @@
 
     <ul class="sidebar_class_links">
         <li>
-            <a class="btn-danger" href="/logout">Logout</a>
+            <a class="btn btn-logout" href="/logout">Logout</a>
         </li>
     </ul>
 </aside>

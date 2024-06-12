@@ -12,6 +12,14 @@ textarea {
     padding: 15px 10px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px;
+}
+
 .login-div p {
     padding: 20px 0 0 0;
     text-align: center;
@@ -375,4 +383,15 @@ aside {
 
 .dp-img {
     border-radius: 50%;
+}
+
+.student_card-container{
+    background: teal;
+    display: flex;
+    flex-direction: column;
+}
+
+.student_card{
+    display: flex;
+    gap: 30px;
 }
